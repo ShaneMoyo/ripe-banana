@@ -46,7 +46,7 @@ describe('studios API', () => {
             });
     });
 
-    it('Gets studios by ID, with films', () =>{
+    it.only('Gets studios by ID, with films', () =>{
         let juno =null;
         let studio = null;
 
@@ -59,8 +59,8 @@ describe('studios API', () => {
                     studio: studio._id,
                     released: 2002
                 };
-                console.log('===11111===I am da studios::::::::', studio);
-                console.log('====11111==I am da jjjjjjjjjjjjjjj::::::::', juno);
+                // console.log('===11111===I am da studios::::::::', studio);
+                // console.log('====11111==I am da jjjjjjjjjjjjjjj::::::::', juno);
                 return request.post('/api/films')
                     .send(juno)
                     .then(() =>{
